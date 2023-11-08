@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  
+  <style>
+    @media (min-width: 576px) {}
+
+
+@media (min-width: 768px) { }
+
+@media (min-width: 992px) { }
+
+@media (min-width: 1200px) {}
+
+.row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .col {
+        flex: 0 0 calc(50% - 10px); /* 50% width with 10px spacing in between columns */
+        margin: 5px; /* Optional spacing between fields */
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 767px) {
+        .col {
+            flex: 1; /* Full width for each column on smaller screens */
+        }
+    }
+
+  </style>
+  <body>
+
+    <div class="container-sm">100% wide until small breakpoint</div>
+  <div class="container-md">100% wide until medium breakpoint</div>
+<div class="container-lg">100% wide until large breakpoint</div>
+<div class="container-xl">100% wid  e until extra large breakpoint</div>
+<div class="container-xxl">100% wide until extra extra large breakpoint</div>
+
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+
+        <legend>Account type (required)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <label>Enter Your First Name:</label>
+            <div>
+              <input id="first-name" name="first-name" type="text" required style="width: 100%;"/>
+            </div>
+          </div>
+          
+      
+          <div class="col">    
+            <label for="last-name">Enter Your Last Name:</label>
+            <di">
+              <input id="last-name" name="last-name" type="text" required style="width: 100%;"/>
+            </div>
+          </div>
+          <div class="col">
+            asd asd
+          </div>                          
+      
+        <div class="row">
+          <div class="col">
+            <div>
+              <label for="email">Enter Your Email:</label>
+              <div>
+              <input id="email" name="email" type="email" required style="width: 100%;"/>
+            </div>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div>
+              <label for="new-password">Create a New Password:</label>
+              <div>
+              <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" 
+              required style="width: 100%;"/>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container-xxl text-center">
+        <div class="row">
+          <div class="col">
+        <label for="profile-picture">Upload a profile picture: </label>
+        </div>
+        </div>
+          <div>
+            <div class="col">
+            <input id="profile-picture" type="file" name="file" />
+          </div>
+          </div>
+      </div>
+
+      <div class="container-xxl">
+            <div class="row">
+              <div class="col">
+                <label for="age">Input your age (years): </label>
+              <div>
+                <input id="age" type="number" name="age" min="13" max="120" style="width: 100%;"/>
+              </div>
+              </div>
+
+              <div class="col">
+                <div>
+                  <label for="referrer">How did you hear about us? </label>
+                </div>
+                  <select id="referrer" name="referrer" style="width: 100%;">
+                    <option value="">(select one)</option>
+                    <option value="1">freeCodeCamp News</option>
+                    <option value="2">freeCodeCamp YouTube Channel</option>
+                    <option value="3">freeCodeCamp Forum</option>
+                    <option value="4">Other</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+
+
+
+        <label for="bio">Provide a bio:</label>
+        <div>
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+        </div>
+
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
+      <div>
+      <input type="submit" value="Submit" />
+    </div>
+    </form>
+  </body>
+</html>
